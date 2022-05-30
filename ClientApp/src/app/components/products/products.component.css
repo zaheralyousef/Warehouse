@@ -1,0 +1,6 @@
+.card-link {
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 0px 5px 1px 5px;
+    border-radius: 5px;
+}

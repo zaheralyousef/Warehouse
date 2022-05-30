@@ -1,0 +1,29 @@
+<h1>Products</h1>
+
+<p *ngIf="!products"><b>Loading...</b></p>
+<div class="card">
+    <table class="table table-striped" *ngIf="products">
+        <thead>
+            <tr>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price | currency:'EUR':"symbol"}}</td>
+                <td>
+                    <a (click)="showProduct(product.id)" class="card-link btn-primary">Sell</a>
+                    |<a (click)="updateProduct(product.id)" class="card-link btn-success">Update</a>
+                    |<a (click)="deleteProduct(product.id)" class="card-link btn-danger">Delete</a>
+                                     
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

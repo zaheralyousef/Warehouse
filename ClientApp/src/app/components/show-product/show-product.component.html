@@ -1,0 +1,11 @@
+<div class="product-details">
+    <div class="card" *ngIf="product">
+        <div class="card-body">
+            <h5 class="card-title">Product name: {{product.name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Product number: {{product.id}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Product price: {{product.price | currency:'EUR':"symbol"}}</h6>
+            <a (click)="sellProduct(product.id)" class="card-link btn-success">Mark as sold</a>
+            <a [routerLink]="['/products']" class="card-link btn-primary">Back</a>            
+        </div>
+    </div>
+</div>

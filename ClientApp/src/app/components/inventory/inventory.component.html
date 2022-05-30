@@ -1,0 +1,29 @@
+<h1>Inventory</h1>
+
+<p *ngIf="!articles"><b>Loading...</b></p>
+<div class="card">
+    <table class="table table-striped" *ngIf="articles">
+        <thead>
+            <tr>
+                <th>Article Id</th>
+                <th>Article Name</th>
+                <th>Stock</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let article of articles">
+                <td>{{article.artId}}</td>
+                <td>{{article.name}}</td>
+                <td>{{article.stock}}</td>
+                <td>
+                    <!--a (click)="showProduct(product.id)" class="card-link btn-primary">Show</!--a>
+                    |<a (click)="updateProduct(product.id)" class="card-link btn-success">Update</a>
+                    |<a (click)="deleteProduct(product.id)" class="card-link btn-danger">Delete</a-->
+
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

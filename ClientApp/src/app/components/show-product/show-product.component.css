@@ -1,0 +1,13 @@
+.product-details{
+    padding: 0 20% 0 20%;
+}
+.btn {
+    margin-right: 5px;
+}
+
+.card-link {
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 0px 5px 1px 5px;
+    border-radius: 5px;
+}

@@ -1,0 +1,39 @@
+<div class="add-product">
+    <p><b>Add a new product:</b></p>
+    <div *ngIf="showError" class="alert alert-danger" role="alert">
+        Product was not added. Please, try again!
+    </div>
+    <form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="id" class="required">Product Id</label>
+            <input type="number" class="form-control" id="id" formControlName="id" aria-describedby="idHelp" placeholder="ex: 4">
+            <small id="idHelp" class="form-text text-muted">Product Id should be unique.</small>
+            <small style="color:red;" *ngIf="addProductForm.controls['id'].invalid &&
+             (addProductForm.controls['id'].dirty ||
+             addProductForm.controls['id'].touched)">
+                Product id is required!
+            </small>
+        </div>        
+        <div class="form-group">
+            <label for="name" class="required">Product Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name" placeholder="ex: Dining table">
+            <small style="color:red;" *ngIf="addProductForm.controls['id'].invalid &&
+             (addProductForm.controls['name'].dirty ||
+             addProductForm.controls['name'].touched)">
+                Product name is required!
+            </small>
+        </div>
+        <div class="form-group">
+            <label for="price">Product Price (&euro;)</label>
+            <input type="number" class="form-control" id="price" formControlName="price" placeholder="ex: 55.00">
+        </div>
+        <div>
+            <p style="font-style:italic">
+                Here we need to add a form that show the available contained articles that can be used in this product. 
+            </p>
+        </div>
+
+        <button type="submit" class="btn btn-success" [disabled]="addProductForm.pristine || addProductForm.invalid">Add</button>
+        <button type="submit" class="btn btn-danger" [routerLink]="['/products']">Cancel</button>
+    </form>
+</div>

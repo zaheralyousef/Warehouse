@@ -1,0 +1,13 @@
+<div class="product-details">
+    <div class="card" *ngIf="product">
+        <div class="card-body">
+            <h5 class="card-title">Product name: {{product.name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Product number: {{product.id}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Product price: {{product.price | currency:'EUR':true}}</h6>
+            <p style="font-style:italic">Delete here doesn't update the inventory</p>
+            <button (click)="deleteProduct(product.id)" class="btn btn-danger">Confirm deletion</button>
+            <button [routerLink]="['/products']" class="btn btn-primary">Cancel</button>
+
+        </div>
+    </div>
+</div>

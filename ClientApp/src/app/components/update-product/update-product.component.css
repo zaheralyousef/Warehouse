@@ -1,0 +1,13 @@
+.update-product {
+    padding: 0 20% 0 20%;
+}
+
+.required:after {
+    content: "*";
+    color: red;
+}
+
+.btn {
+    margin-right: 5px;
+    padding: 0px 5px 0px 5px;
+}

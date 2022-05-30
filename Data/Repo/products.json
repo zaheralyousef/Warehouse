@@ -1,0 +1,42 @@
+{
+  "Products": [
+    {
+      "Id": 1,
+      "Price": 40.10,
+      "Name": "Dining Chair",
+      "ContainArticles": [
+        {
+          "ArtId": 1,
+          "AmountOf": 4
+        },
+        {
+          "ArtId": 2,
+          "AmountOf": 8
+        },
+        {
+          "ArtId": 3,
+          "AmountOf": 1
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "Price": 150.00,
+      "Name": "Dinning Table",
+      "ContainArticles": [
+        {
+          "ArtId": 1,
+          "AmountOf": 4
+        },
+        {
+          "ArtId": 2,
+          "AmountOf": 8
+        },
+        {
+          "ArtId": 4,
+          "AmountOf": 1
+        }
+      ]
+    }
+  ]
+}

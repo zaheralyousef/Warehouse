@@ -1,0 +1,20 @@
+<div class="update-product">
+    <p><b>Update a product:</b></p>
+    <form [formGroup]="updateProductForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="id" class="required">Product Id</label>
+            <input type="number" class="form-control" id="id" formControlName="id" aria-describedby="idHelp" placeholder="ex: 4">
+            <small id="idHelp" class="form-text text-muted">Product Id should be unique.</small>
+        </div>
+        <div class="form-group">
+            <label for="name" class="required">Product Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name" placeholder="ex: Dining table">
+        </div>
+        <div class="form-group">
+            <label for="price">Product Price (&euro;)</label>
+            <input type="number" class="form-control" id="price" formControlName="price" placeholder="ex: 55.00">
+        </div>
+        <button type="submit" class="btn btn-success">Update</button>
+        <button type="submit" class="btn btn-primary" [routerLink]="['/products']">Cancel</button>
+    </form>
+</div>
